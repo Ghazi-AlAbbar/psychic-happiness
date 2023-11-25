@@ -22,11 +22,6 @@ void updatingfd(char *username,int i)
 		perror("dprintf");
 		exit(EXIT_FAILURE);
 	}
-	if (dprintf(fd, "%s ", "\n") < 0) 
-	{
-		perror("dprintf");
-		exit(EXIT_FAILURE);
-	}
 
 	close(fd);
 }
