@@ -9,4 +9,6 @@ khalid book 3.00
  wahab t 4.00 
  waha tt 5.00 khalid t 3.00 
  waha t 5.00 khalid y 3.00 
- ghaz y 5.00 
+ ghaz y 5.00 khalid t 4.00 
+ wahab r5 4.00 
+ ghaz t 5.00 waha r5 6.00 jaba t 7.00 waha r5 7.00 waha r5 9.00 

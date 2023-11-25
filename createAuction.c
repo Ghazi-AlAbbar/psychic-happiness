@@ -60,7 +60,7 @@ void createNewAuction(char* username)
 		exit(EXIT_FAILURE);
 	}
 
-	snprintf(Auctionlist[count].user_name, strlen(username), "%s", username);
+	strncpy(Auctionlist[count].user_name, username, strlen(username));
 
 
 

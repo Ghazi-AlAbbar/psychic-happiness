@@ -20,7 +20,7 @@ struct User {
 #include <pthread.h>
 #include <time.h>
 struct AuctionItem {
-    char user_name[5];
+    char user_name[10];
     char item_name[50];
     float starting_price;
     
@@ -32,7 +32,7 @@ typedef struct Auctionthread
 	time_t start_time;
 	time_t deadline;
     	int is_valid;
-    	char username[5];
+    	char username[10];
 } Auctionth;
 void createNewAuction(char *);
 

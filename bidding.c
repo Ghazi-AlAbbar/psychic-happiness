@@ -14,10 +14,15 @@ void updatingfd(char *username,int i)
 		perror("Failed to open file Auction\n");
 		exit(EXIT_FAILURE);
 	}
-	snprintf(Auctionlist[i].user_name, strlen(username), "%s", username);
+	strncpy(Auctionlist[i].user_name, username, strlen(username));
 
 
 	if (dprintf(fd, "%s %s %.2f ",Auctionlist[i].user_name, Auctionlist[i].item_name, Auctionlist[i].starting_price) < 0) 
+	{
+		perror("dprintf");
+		exit(EXIT_FAILURE);
+	}
+	if (dprintf(fd, "%s ", "\n") < 0) 
 	{
 		perror("dprintf");
 		exit(EXIT_FAILURE);
@@ -49,7 +54,11 @@ void Bidding(char* username, int count1)
 	
 
 		if (strcmp(Auctionlist[i].item_name, item_name) == 0)
-		{	printf("Count : %d\n",i);
+		{	if (strcmp(Auctionlist[i].user_name, username) == 0){
+                
+               			 printf("You cannot bid on your own item!\n");
+               			 break;
+           		 }
 			current_price = Auctionlist[i].starting_price;
 			visited=1;
 			break;
