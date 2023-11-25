@@ -1,3 +1,0 @@
-# psychic-happiness
-
-test
