@@ -9,7 +9,7 @@ void input()
     	while(1){
 	
 	printf("Select an option:\n");
-	printf("1. Sing Up \n");
+	printf("1. Sign Up \n");
 	printf("2. Log in\n");
 	printf("3. Exit\n");
 	printf("Enter your choice: ");
@@ -44,9 +44,9 @@ void input()
 }
 int main()
 { 	
-printf("Count3 ");
+//printf("Count3 ");
 		
 	input();
-	printf("Count4 : ");
+//	printf("Count4 : ");
  	return 0;
  }

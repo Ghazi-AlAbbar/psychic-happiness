@@ -26,4 +26,7 @@ ahmad book 3.00
  wahab ff 4.00 
  waha book 4.00 waha ff 6.00 khalid book 4.00 
  khalid ggg 3.00 
- 
+ ghazy car 1000.00 
+ khali  2000.00 ghazy glasses 10.00 
+ waha glasses 20.00 wahab donkey 20.00 
+ khali  30.00 

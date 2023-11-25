@@ -5,36 +5,39 @@ void userlogin(char *buftoken)
 	
 	int choice;
 	static int count2=0;
-	printf("1: Bidding\n");
-        printf("2: Selling\n");
-        printf("3: Sing Out\n");
-        
-        printf("Enter your choice: ");
-        if (scanf("%d", &choice) != 1) 
-        {
-		perror("Error reading choice\n");
-		exit(EXIT_FAILURE);
-	}
-        if (choice == 1) 
-	{
+	while (1){
+		printf("1: Bidding\n");
+		printf("2: Selling\n");
+		printf("3: Sign Out\n");
 		
-		printf("Count1 : %d\n",count2);
-		Bidding(buftoken,count2);
-		
-	}
-	else if (choice == 2) 
-	{	count2++;
-		createNewAuction(buftoken);
-	}
-	else if (choice == 3) 
-	{
-		input();
-	}
-	else 
-    	{
-        	printf("Invalid choice. Exiting.\n");
-        	exit(EXIT_FAILURE);
-    	}
+		printf("Enter your choice: ");
+		if (scanf("%d", &choice) != 1) 
+		{
+			perror("Error reading choice\n");
+			exit(EXIT_FAILURE);
+		}
+		if (choice == 1) 
+		{
+			
+			printf("Count1 : %d\n",count2);
+			Bidding(buftoken,count2);
+			
+		}
+		else if (choice == 2) 
+		{	count2++;
+			createNewAuction(buftoken);
+		}
+		else if (choice == 3) 
+		{
+			//input();
+			return;
+		}
+		else 
+	    	{
+			printf("Invalid choice. Exiting.\n");
+			exit(EXIT_FAILURE);
+	    	}
+	    }
 }
 void login() {
 	// Create an instance of the User struct and initialize it with predefined values
@@ -102,7 +105,7 @@ void login() {
 		printf("Login failed. Invalid username or password. Try again.\n");
 	}
 	}
-
+	
 	// Free memory for buftoken
 	for (int j = 0; j < sizeof(buftoken)-1 ; ++j) 
 	{

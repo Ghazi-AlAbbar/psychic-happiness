@@ -36,7 +36,7 @@ void* printTimeAndRemaining(void* arg) {
 
             pthread_mutex_unlock(&mutex);
 
-            input();
+            // input();
             userlogin(auction->username);
             return NULL;
         }
