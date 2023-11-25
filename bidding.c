@@ -28,6 +28,7 @@ void updatingfd(char *username,int i)
 
 void Bidding(char* username, int count1) 
 {
+	
 	count=count1;
 	float bid_amount;
 	char item_name[50];
@@ -61,13 +62,7 @@ void Bidding(char* username, int count1)
 
 		puts("\t\tWelcome to the Auction Platform!");
 		printf("Get ready to bid on the item '%s'. The starting price is %.2f KD.\n", Auctionlist[i].item_name,  Auctionlist[i].starting_price);
-		
-
-		
-		
-
-		
-		
+	
 		printf("Enter your bid amount: ");
 
 		if (scanf("%f", &bid_amount) != 1) 
@@ -99,7 +94,7 @@ void Bidding(char* username, int count1)
 		}
 		
 		
-	//pthread_mutex_unlock(&mutex);
+	
 	}
 	else 
 	{

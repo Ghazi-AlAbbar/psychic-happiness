@@ -35,9 +35,9 @@ void* printTimeAndRemaining(void* arg) {
             count--;
 
             pthread_mutex_unlock(&mutex);
-
-            input();
-            userlogin(auction->username);
+		//userlogin(auction->username);
+           // input();
+            
             return NULL;
         }
 
@@ -98,7 +98,6 @@ void createNewAuction(char* username)
 		exit(EXIT_FAILURE);
 	}
 	count++;
-	
 	printf("Count : %d\n",count);
 	Auctionth auction [10];
 	strcpy(auction[count].username, username);
@@ -109,6 +108,7 @@ void createNewAuction(char* username)
 	pthread_t timeThread[10];
 	pthread_create(&timeThread[count], NULL, printTimeAndRemaining,(void*)&auction[count]);
 
+	
 	
 	
 	pthread_join(timeThread[count],NULL);

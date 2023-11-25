@@ -2,40 +2,43 @@
 
 void userlogin(char *buftoken)
 {
-	
-	int choice;
-	static int count2=0;
-	printf("1: Bidding\n");
-        printf("2: Selling\n");
-        printf("3: Sing Out\n");
-        
-        printf("Enter your choice: ");
-        if (scanf("%d", &choice) != 1) 
-        {
-		perror("Error reading choice\n");
-		exit(EXIT_FAILURE);
-	}
-        if (choice == 1) 
-	{
-		
-		printf("Count1 : %d\n",count2);
-		Bidding(buftoken,count2);
-		
-	}
-	else if (choice == 2) 
-	{	count2++;
-		createNewAuction(buftoken);
-	}
-	else if (choice == 3) 
-	{
-		input();
-	}
-	else 
-    	{
-        	printf("Invalid choice. Exiting.\n");
-        	exit(EXIT_FAILURE);
-    	}
+    int choice;
+    static int count2 = 0;
+
+    printf("1: Bidding\n");
+    printf("2: Selling\n");
+    printf("3: Sign Out\n");
+
+    printf("Enter your choice: ");
+
+    if (scanf("%d", &choice) != 1)
+    {
+        perror("Error reading choice\n");
+        exit(EXIT_FAILURE);
+    }
+
+    switch (choice)
+    {
+    case 1:
+        printf("Count1 : %d\n", count2);
+        Bidding(buftoken, count2);
+        break;
+
+    case 2:
+        count2++;
+        createNewAuction(buftoken);
+        break;
+
+    case 3:
+        input();
+        break;
+
+    default:
+        printf("Invalid choice. Exiting.\n");
+        exit(EXIT_FAILURE);
+    }
 }
+
 void login() {
 	// Create an instance of the User struct and initialize it with predefined values
 	struct User user1;

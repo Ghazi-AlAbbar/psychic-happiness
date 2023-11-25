@@ -1,4 +1,4 @@
-# Mohamed El-Assar
+
 all:
 	make objects lib223 cs223
 
